@@ -216,3 +216,25 @@ a:hover { color: #b68235; }
 .ek-cat-chip b { font-family: 'IBM Plex Mono', monospace; font-weight: 400; font-size: 10px; color: #8e6427; margin-left: 4px; }
 .ek-table tr { position: relative; }
 .ek-table td a.ek-row-link::after { content: ""; position: absolute; inset: 0; }
+
+/* events table on phones: same content, no horizontal scroll — each row becomes a compact card.
+   Sl is dropped, date/day/time share one line, venue + organizer share the last line. */
+@media (max-width: 760px) {
+  .ek-table-wrap { overflow-x: visible; }
+  .ek-table, .ek-table tbody { display: block; }
+  .ek-table thead { display: none; }
+  .ek-table tr { display: flex; flex-wrap: wrap; align-items: center; column-gap: 8px; row-gap: 6px; padding: 14px 16px; border-bottom: 1px solid #eae7e2; }
+  .ek-table tr:last-child { border-bottom: 0; }
+  .ek-table td { display: block; padding: 0; border: 0; background: none !important; font-size: 12px; }
+  .ek-table .c-sl { display: none; }
+  .ek-table .c-date, .ek-table .c-day, .ek-table .c-time { order: 1; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .04em; color: #8e6427; }
+  .ek-table .c-day { order: 2; }
+  .ek-table .c-time { order: 3; }
+  .ek-table .c-category { order: 4; margin-left: auto; border: 1px solid #c9c6c0; border-radius: 3px; padding: 2px 7px; font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; text-transform: uppercase; color: #4a463f; }
+  .ek-table .c-program { order: 5; flex-basis: 100%; }
+  .ek-table .c-program a.ek-row-link { font-size: 21px; line-height: 1.2; }
+  .ek-table .c-venue { order: 6; color: #4a463f; }
+  .ek-table .c-venue::before { content: "⌖ "; color: #8a857d; }
+  .ek-table .c-organizer { order: 7; color: #6b665e; }
+  .ek-table .c-organizer::before { content: "· "; }
+}
