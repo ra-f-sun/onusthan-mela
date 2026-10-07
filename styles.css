@@ -192,3 +192,25 @@ a:hover { color: #b68235; }
   .nav-logo-tag { display: none; }
   .nav-search { width: 120px; font-size: 9px; }
 }
+
+/* brand logo + account actions */
+.nav-logo-img { height: 40px; width: auto; display: block; }
+.nav-actions { display: flex; gap: 8px; flex: none; }
+.nav-btn { border: 1px solid #c9c6c0; border-radius: 4px; padding: 8px 12px; font-size: 12px; color: #4a463f; text-decoration: none; white-space: nowrap; background: #fff; }
+.nav-btn:hover { color: #8e6427; border-color: #b68235; }
+.nav-btn-primary { border-color: #b68235; color: #8e6427; background: #f9f5ed; }
+@media (max-width: 760px) { .nav-actions { order: 2; } .nav-search { margin-left: 0; } }
+@media (min-width: 761px) { .nav-search { width: 140px; } }
+
+/* event tables + featured cards (landing / listings) */
+.ek-table { width: 100%; border-collapse: collapse; background: #fff; font-size: 12px; color: #4a463f; }
+.ek-table th { text-align: left; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: #8a857d; font-weight: 400; padding: 10px 12px; border-bottom: 1px solid #c9c6c0; background: #faf9f7; }
+.ek-table td { padding: 11px 12px; border-bottom: 1px solid #eae7e2; vertical-align: top; }
+.ek-table tr:hover td { background: #f9f5ed; }
+.ek-table td a.ek-row-link { color: #201f1d; text-decoration: none; font-family: 'Cormorant Garamond', serif; font-size: 16px; }
+.ek-table-wrap { overflow-x: auto; border: 1px solid #c9c6c0; }
+.ek-feat-img { width: 100%; height: 150px; object-fit: cover; display: block; background: #e4e1dc; }
+.ek-poster { width: 100%; height: auto; display: block; }
+.ek-cat-chip { border: 1px solid #c9c6c0; border-radius: 4px; padding: 8px 14px; font-size: 12px; color: #4a463f; background: #fff; text-decoration: none; }
+.ek-cat-chip:hover { border-color: #b68235; color: #8e6427; }
+.ek-cat-chip b { font-family: 'IBM Plex Mono', monospace; font-weight: 400; font-size: 10px; color: #8e6427; margin-left: 4px; }
